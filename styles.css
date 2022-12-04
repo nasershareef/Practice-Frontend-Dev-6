@@ -1,0 +1,133 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+body{
+  background-color: hsl(225, 100%, 94%);
+}
+
+.background-image-1{
+  width: 100%;
+  z-index: -2;
+  position:absolute;
+  left:0px;
+  top:0px;
+  z-index:-1;
+}
+.background-image-2{
+  display: none;
+}
+
+main{
+  display: flex;
+  justify-content: center;
+  height: 700px;
+}
+
+.card{
+  background-color: rgb(255, 255, 255);
+  margin: auto;
+  width: 350px;
+  height: 550px;
+  border-radius: 20px;
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+}
+
+.card img{
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+}
+
+.card h1{
+  font-size: 1.5rem;
+  margin-top: 40px;
+}
+
+.info{
+  font-size: .9rem;
+  margin: 20px 40px;
+  color: hsl(0, 0%, 40%);
+}
+
+.card li{
+  list-style-type : none;
+}
+
+.price-info{
+  background-color: hsl(225, 100%, 98%);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 60px 120px 120px;
+  border-radius: 10px;
+  margin: 0 25px 20px 25px;
+  align-items: center;
+  height: 60px;
+}
+
+.card ul img{
+  margin-left: 10px;
+  display: block;
+  width: 80%;
+  height: 80%;
+}
+
+.price{
+  font-size: .8rem;
+  font-weight: bold;
+}
+.plan-name{
+  margin-bottom: 5px;
+}
+.plan-price{
+  color: hsl(0, 0%, 40%);
+}
+
+.change{
+  font-weight: bold;
+  font-size: .9rem;
+  color: hsl(245, 75%, 52%);
+}
+.change:hover{
+  color:  hsla(248, 41%, 56%, 1);
+}
+
+.card button{
+  border-radius: 10px;
+  border: none;
+  margin: 0 25px 25px;
+  font-weight: bolder;
+  letter-spacing: .5px;
+}
+.btn-paymant{
+  background-color: hsl(245, 75%, 52%);
+  color: white;
+}
+.btn-paymant:hover{
+  background-color: hsla(242, 48%, 56%, 1);
+}
+.btn-cancel{
+  background-color: white;
+  color: hsl(0, 0%, 40%);
+}
+.btn-cancel:hover{
+  color: black;
+}
+
+@media only screen and (max-width: 700px) {
+  .background-image-1{
+    display: none;
+  }
+  .background-image-2{
+    display: block;
+    width: 100%;
+    z-index: -2;
+    position:absolute;
+    left:0px;
+    top:0px;
+    z-index:-1;
+  }
+}
